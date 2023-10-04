@@ -35,6 +35,7 @@ public class StringTest {
     @DisplayName("charAt() 메소드를 통해 특정 위치의 문자를 가져오는 테스트")
     void get_word_index() {
         String str = "abc";
+
         assertThat(str.charAt(0)).isEqualTo('a');
         assertThat(str.charAt(2)).isEqualTo('c');
 
