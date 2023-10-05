@@ -1,7 +1,5 @@
 package stage1;
 
-import java.util.Scanner;
-
 public class StringCalculator {
 
     public double add(double result, double newNum) {
@@ -34,31 +32,26 @@ public class StringCalculator {
                 sign = value;
                 continue;
             }
-            double newNumber = stringToDouble(value);
-
-            if ("+".equals(sign)) {
-                result = add(result, newNumber);
-                continue;
-            }
-
-            if ("-".equals(sign)) {
-                result = subtract(result, newNumber);
-                continue;
-            }
-
-            if ("*".equals(sign)) {
-                result = multiply(result, newNumber);
-                continue;
-            }
-
-            if ("/".equals(sign)) {
-                result = divide(result, newNumber);
-                continue;
-            }
-
-            result = newNumber;
+            result = calculate(sign, result, stringToDouble(value));
         }
+
         return result;
+    }
+
+    private double calculate(String sign, double result, double newNumber) {
+        if ("+".equals(sign)) {
+            return add(result, newNumber);
+        }
+        if ("-".equals(sign)) {
+            return subtract(result, newNumber);
+        }
+        if ("*".equals(sign)) {
+            return multiply(result, newNumber);
+        }
+        if ("/".equals(sign)) {
+            return divide(result, newNumber);
+        }
+        return newNumber;
     }
 
     private double stringToDouble(String input) {
