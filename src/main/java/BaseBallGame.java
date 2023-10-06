@@ -1,4 +1,4 @@
-pub548lic class BaseBallGame {
+public class BaseBallGame {
 
     private static final int RESTART = 1;
 
