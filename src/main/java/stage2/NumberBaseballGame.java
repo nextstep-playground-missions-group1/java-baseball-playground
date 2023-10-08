@@ -20,7 +20,7 @@ public class NumberBaseballGame {
         setChances(input.selectLevel());
         computerNumbers = setComputerNumbers(new HashSet<>());
         usesOneChance();
-        View.showRightAnswer(computerNumbers);
+        View.showComputerNumbers(computerNumbers);
         if (input.askOneMoreGame()) {
             playGame();
         }
@@ -49,7 +49,7 @@ public class NumberBaseballGame {
         List<Integer> userNumbers = input.getUserNumbers();
 
         int strikes = scoreSystem.countStrikes(userNumbers, computerNumbers);
-        int balls = scoreSystem.countBalls(userNumbers, computerNumbers);
+        int balls = scoreSystem.countBalls(userNumbers, computerNumbers, strikes);
         View.showScores(strikes, balls);
 
         if (isThreeStrikes(strikes)) {

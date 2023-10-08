@@ -33,17 +33,17 @@ public class View {
         System.out.print("숫자를 입력해 주세요 : ");
     }
 
-    public static void showScores(int strike, int ball) {
+    public static void showScores(int strikes, int balls) {
         StringBuilder sb = new StringBuilder();
-        if (ball == 0 && strike == 0) {
+        if (balls == 0 && strikes == 0) {
             System.out.println("낫싱\n");
             return;
         }
-        if (ball != 0) {
-            sb.append(ball).append("볼 ");
+        if (balls != 0) {
+            sb.append(balls).append("볼 ");
         }
-        if (strike != 0) {
-            sb.append(strike).append("스트라이크");
+        if (strikes != 0) {
+            sb.append(strikes).append("스트라이크");
         }
         System.out.println(sb.append("\n"));
     }
@@ -69,7 +69,7 @@ public class View {
         System.out.print("> ");
     }
 
-    public static void showRightAnswer(List<Integer> computerNumbers) {
+    public static void showComputerNumbers(List<Integer> computerNumbers) {
         StringBuilder computerNumber = new StringBuilder();
         for (Integer number : computerNumbers) {
             computerNumber.append(number);
