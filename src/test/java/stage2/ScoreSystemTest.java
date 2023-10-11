@@ -49,14 +49,14 @@ public class ScoreSystemTest {
 
     static Stream<Arguments> NumbersAndBalls() {
         return Stream.of(
-                Arguments.arguments(new ArrayList<>(List.of(1, 2, 3)), new ArrayList<>(List.of(1, 2, 3)), 3, 0),
-                Arguments.arguments(new ArrayList<>(List.of(1, 3, 2)), new ArrayList<>(List.of(1, 2, 3)), 1, 2),
-                Arguments.arguments(new ArrayList<>(List.of(1, 2, 4)), new ArrayList<>(List.of(1, 2, 3)), 2, 0),
-                Arguments.arguments(new ArrayList<>(List.of(4, 5, 6)), new ArrayList<>(List.of(1, 2, 3)), 0, 0),
-                Arguments.arguments(new ArrayList<>(List.of(2, 6, 8)), new ArrayList<>(List.of(4, 6, 8)), 2, 0),
-                Arguments.arguments(new ArrayList<>(List.of(3, 7, 2)), new ArrayList<>(List.of(7, 1, 2)), 1, 1),
-                Arguments.arguments(new ArrayList<>(List.of(8, 9, 7)), new ArrayList<>(List.of(7, 8, 9)), 0, 3),
-                Arguments.arguments(new ArrayList<>(List.of(5, 9, 1)), new ArrayList<>(List.of(5, 2, 9)), 1, 1)
+                Arguments.arguments(List.of(1, 2, 3), List.of(1, 2, 3), 3, 0),
+                Arguments.arguments(List.of(1, 3, 2), List.of(1, 2, 3), 1, 2),
+                Arguments.arguments(List.of(1, 2, 4), List.of(1, 2, 3), 2, 0),
+                Arguments.arguments(List.of(4, 5, 6), List.of(1, 2, 3), 0, 0),
+                Arguments.arguments(List.of(2, 6, 8), List.of(4, 6, 8), 2, 0),
+                Arguments.arguments(List.of(3, 7, 2), List.of(7, 1, 2), 1, 1),
+                Arguments.arguments(List.of(8, 9, 7), List.of(7, 8, 9), 0, 3),
+                Arguments.arguments(List.of(5, 9, 1), List.of(5, 2, 9), 1, 1)
         );
     }
 }
